@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getScores, postScore, deleteScore } from '../controllers/scores.js';
+import { getScores, postScore } from '../controllers/scores.js';
 
 const router = express.Router();
 
