@@ -1,0 +1,10 @@
+GET http://localhost:5000/scores
+
+###
+
+POST http://localhost:5000/scores
+Context-Type: application/json
+
+{
+    "score": 5,
+}
