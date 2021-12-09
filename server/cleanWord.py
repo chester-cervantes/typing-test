@@ -1,8 +1,8 @@
-with open('words.txt') as reader:
-    # Further file processing goes here
-    lines = reader.readlines()
+import sys 
+with open(sys.argv[0], "r") as f:
+    lines = f.readlines()
+with open(sys.argv[1], "w") as f:
     for line in lines:
-        if len(line) <= 1 or len(line) >= 5:
-            lines.remove(line)
-    with open('cleanedWords.txt', 'w') as f:
-        f.write(lines)
+        word = line.strip("\n")
+        if len(word) > 1 and word.isalnum():
+            f.write(line)
